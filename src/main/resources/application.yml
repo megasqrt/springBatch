@@ -1,0 +1,29 @@
+spring:
+  data:
+    mongodb:
+      url: mongodb://localhost
+      port: 666
+      database: libcat
+
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
+  liquibase:
+    change-log: classpath:liquibase/changeLog.xml
+
+  h2:
+    console:
+      enabled: true
+
+  batch:
+    job:
+      enabled: false
+
+logging:
+  level:
+    root: error
+  pattern:
+    console: "%msg%n"
